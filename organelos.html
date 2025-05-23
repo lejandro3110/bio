@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>organelos celulares</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", system-ui, sans-serif;
+
+    background: url("imagenes/Microorganismos.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+    .grid{
+      display:grid;gap:4rem 6rem;grid-template-columns:repeat(2,1fr)
+    }
+    
+    .btn-pill{
+      --h:74px;--shadow:6px;
+      display:inline-flex;align-items:center;justify-content:center;
+      height:var(--h);min-width:300px;padding:0 2.8rem;
+      border:var(--shadow) solid #000;border-radius:calc(var(--h)/2);
+      font-size:1.45rem;font-weight:700;letter-spacing:.03em;
+      color:#fff;text-align:center;text-decoration:none;position:relative;
+      cursor:pointer;transition:transform .15s,filter .15s;
+      box-shadow:0 var(--shadow) 0 0 #000;line-height:1.25
+    }
+    .btn-pill::before{
+      content:"";position:absolute;inset:0;border-radius:inherit;
+      background:linear-gradient(to bottom,rgba(0,0,0,.15),rgba(0,0,0,.35) 80%);
+      mix-blend-mode:overlay;pointer-events:none
+    }
+    .btn-pill:hover{filter:brightness(1.08)}
+    .btn-pill:active{transform:translateY(3px);
+      box-shadow:0 calc(var(--shadow)-3px) 0 0 #000}
+    
+    .btn-micro{background:linear-gradient(135deg,#ff45a4,#ffa3ef)}
+    .btn-org{background:linear-gradient(135deg,#677bff,#7d8dff)}
+    .btn-mole{background:linear-gradient(135deg,#00c6a4,#00e7ff)}
+    .btn-proc{background:linear-gradient(135deg,#0086ff,#009dff)}
+    .btn-gen{background:linear-gradient(135deg,#ff914d,#ffca85)}
+    .btn-eco{background:linear-gradient(135deg,#65c744,#a7e764)}
+    .btn-evo{background:linear-gradient(135deg,#9a55ff,#d29bff)}
+    
+    @media(max-width:600px){
+      .grid{grid-template-columns:1fr;gap:2.5rem}
+      .btn-pill{min-width:250px;font-size:1.25rem}
+    }
+</style>
+</head>
+
+<body>
+  <div class="grid">
+    
+
+    <a href="NUCLEO.HTML" class="btn-pill btn-micro">
+      NUCLEO
+    </a>
+    <a href="MITOCONDRIA.HTML" class="btn-pill btn-org">
+        MITOCONDRIA 
+    </a>
+    <a href="RETÍCULOENDOPLÁSMICO.html" class="btn-pill btn-mole">
+        RETÍCULO ENDOPLÁSMICO 
+    </a>
+    <a href="APARATODEGOLGI.HTML" class="btn-pill btn-proc">
+        APARATO DE<br>GOLGI
+    </a>
+        <a href="LISOSOMAS.HTML" class="btn-pill btn-micro">
+            LISOSOMAS
+            <a href="RIBOSOMAS.HTML" class="btn-pill btn-micro">
+                RIBOSOMAS
+              </a>
+              <a href="index.HTML" class="btn-pill btn-info extra-btn">MENU</a>
+
+              <a href="CITOPLASMA.HTML" class="btn-pill btn-org">
+                CITOPLASMA 
+            </a>
+  </div>
+</body>
+</html>

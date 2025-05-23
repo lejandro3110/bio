@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>MICROORGANISMOS Y TIPOS CELULARES</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: "Poppins", system-ui, sans-serif;
+    }
+
+    /* ---------- Contenedor principal con fondo ---------- */
+    .bg-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("imagenes/microbios-e1577910403418.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+
+    
+
+
+    /* ---------- Grid de botones ---------- */
+    .grid {
+      display: grid;
+      gap: 4rem 6rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---------- Botón base ---------- */
+    .btn-pill {
+      --h: 74px;
+      --shadow: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--h);
+      min-width: 300px;
+      padding: 0 2.8rem;
+      border: var(--shadow) solid #000;
+      border-radius: calc(var(--h) / 2);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+      transition: transform .15s, filter .15s;
+      box-shadow: 0 var(--shadow) 0 0 #000;
+      line-height: 1.25;
+    }
+
+    .btn-pill::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.35) 80%);
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    .btn-pill:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn-pill:active {
+      transform: translateY(3px);
+      box-shadow: 0 calc(var(--shadow) - 3px) 0 0 #000;
+    }
+
+    /* ---------- Degradados ---------- */
+    .btn-micro { background: linear-gradient(135deg, #ff45a4, #ffa3ef); }
+    .btn-org   { background: linear-gradient(135deg, #677bff, #7d8dff); }
+    .btn-mole  { background: linear-gradient(135deg, #00c6a4, #00e7ff); }
+    .btn-proc  { background: linear-gradient(135deg, #0086ff, #009dff); }
+
+    /* ---------- Responsive ---------- */
+    @media(max-width:600px){
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .btn-pill {
+        min-width: 250px;
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-container">
+    <div class="grid">
+      <a href="VIRUS.HTML" class="btn-pill btn-micro">Virus</a>
+      <a href="hongos.html" class="btn-pill btn-org">Hongos</a>
+      <a href="bacterias.html" class="btn-pill btn-mole">Bacterias</a>
+      <a href="peptidos.html" class="btn-pill btn-proc">Péptidos</a>
+      <a href="index.HTML" class="btn-pill btn-info extra-btn">MENU</a>
+        </div>
+  </div>
+</body>
+</html>
